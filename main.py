@@ -4,6 +4,24 @@ import cherrypy, os
 import os
 
 
+class LorenaJudicial:
+    @cherrypy.expose
+    def index(self):
+        return """
+        <form action="/info">
+        <input type="text" name="nombre">
+        <input type="submit" value="consultar">
+        </form>        
+        """
+    @cherrypy.expose
+    def info(self, nombre=""):
+        res = "<p> {$detalleAntecedente} </p> <img src=\"/static/images/{$imagenConsulta}\">"
+        detalleAntecedente = Antecedentes().consultaAntecedentesNombre(nombre)
+        imagenConsulta = Antecedentes().consultaImagen(nombre)
+        res = res.replace("{$detalleAntecedente}", detalleAntecedente)
+        res = res.replace("{$imagenConsulta}", imagenConsulta)
+        return res
+
 class goodAndDevil(object):
     @cherrypy.expose
     def index(self):
