@@ -7,17 +7,162 @@ import os
 class goodAndDevil(object):
     @cherrypy.expose
     def index(self):
-        return GeneraHtml().createList()
+        return """ 
+<!DOCTYPE html>
 
-    @cherrypy.expose
-    def gregorio(self):
-        return "rece gregorio"
+<html>
+  
+<head>
+    
+<meta name="viewport" content="width=device-width">
+    
+<title>Selector Genero</title>
+    
+<link href="indexx.css" rel="stylesheet" type="text/css" />
+ 
+</head>
+  
+<body <div id="background"></div>
+	
+	<h1>Selecciona<br> tu Genero</h1>
 
-    @cherrypy.expose
-    def andres(self, nota=0):
-        return """
-        <!DOCTYPE html><html><body><div id="demo"><h1>The XMLHttpRequest Object</h1><button type="button" onclick="loadDoc()">Change Content</button></div><script>function loadDoc(){var xhttp=new XMLHttpRequest(); xhttp.onreadystatechange=function(){if (this.readyState==4 && this.status==200){document.getElementById("demo").innerHTML=this.responseText;}}; xhttp.open("GET", "http://127.0.0.1:8000/", true); xhttp.send();}</script></body></html>
+
+	<div class="signo_masculino"><img src="../images/idmasculino.png" alt="MASCULINO" ></div>   
+
+	<div class="signo_femenino">
+<img src="../images/idfemenino.png" alt="FEMENINO">
+</div>
+
+	
+       </div>
+
+
+
+
+</body>
+
+</html>
+
+
+
+        <form action="genero">        
+        <input type="text" name="genero">
+        <input type="submit" value="Enviar">
+        </form>|
+
+
         """
+
+    @cherrypy.expose
+    def genero(self, genero=""):
+        if (genero == "hombre"):
+            res = """<!DOCTYPE html>
+
+<html>
+  
+<head>
+    
+<meta charset="utf-8">
+    
+<meta name="viewport" content="width=device-width">
+    
+<title>Avatar Nombre Hombre</title>
+    
+<link href="indexx.css" rel="stylesheet" type="text/css" />
+  
+</head>
+  
+<body>
+  
+
+<h1>Selecciona<br> tu Genero</h1>
+
+
+	<div class="signo_masculino" ><center>
+  
+	<img src="../images/idmasculino.png" alt="MASCULINO" >
+  </center></div>
+  
+
+	
+	<div class="signo_femenino"><center>
+  
+	<img src="../images/idfemenino.png" alt="FEMENINO">
+  
+	</center></div>
+
+			<form>
+  			<label for="fname"><h2><center>Primer Nombre</center></h2></label>
+  			<center><input type="text" id="fname" name="fname" value="Andres"></center>
+  			<label for="lname"><h2><center>Primer Apellido</center></h2></label>
+  			<center><input type="text" id="lname" name="lname" value="Rincon"></center>
+			</form>
+	
+	<div>
+	<button class="button button1"><p> Ingresar Nombre </p></button>
+	</div>
+
+
+
+
+
+
+</body>
+
+</html>"""
+        else:
+            res = """<!DOCTYPE html>
+
+<html>
+  
+<head>
+    
+<meta charset="utf-8">
+    
+<meta name="viewport" content="width=device-width">
+    
+<title>Avatar Nombre Mujer</title>
+    
+<link href="indexx.css" rel="stylesheet" type="text/css" />
+  
+</head>
+  
+<body>
+  
+
+<h1>Selecciona<br> tu Genero</h1>
+
+
+
+	<div class="signo_masculino" ><center>
+  
+	<img src="../images/idmasculino.png" alt="MASCULINO" >
+	</center></div>
+  
+	
+	
+<div class="signo_femenino"><center>
+  
+	<img src="../images/idfemenino.png" alt="FEMENINO">
+  
+	</center></div>
+
+
+			<form>
+  			<label for="fname"><h2><center>Primer Nombre</center></h2></label>
+  			<center><input type="text" id="fname" name="fname" value="Alejandra"></center>
+  			<label for="lname"><h2><center>Primer Apellido</center></h2></label>
+  			<center><input type="text" id="lname" name="lname" value="Martinez"></center>
+			</form>
+	<div>	
+	<button class="button button1"><p> Ingresar Nombre </p></button>
+	</div>
+
+</body>
+
+</html>"""
+        return res
+
 
     @cherrypy.expose
     def pagina(self):
@@ -40,19 +185,5 @@ if __name__ == '__main__':
     cherrypy.config.update({'server.socket_host': '127.0.0.1', })
     cherrypy.config.update({'server.socket_port': int(os.environ.get('PORT', '8000')), })
     cherrypy.quickstart(goodAndDevil(), '/', conf)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
