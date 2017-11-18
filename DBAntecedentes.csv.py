@@ -1,2 +1,21 @@
-Jose Parra , 1074416963, sin antecedentes
-Andres Rincon , 7346790, con antecedentes
+Jose Parra,1074416963,sin antecedentes,
+Andres Rincon,7346790,con antecedentes,
+Jairo Martinez,48689576,homicidio culposo,
+Sebastian Achurry,8076674,sin antecedentes penales,
+Carlos Salazar,534324254,robo a mano armada,
+Miguel Salazar,3324457870,Asesinato de tercer grado,
+Daniel Calderon, 578789675,Violacio en menor de edad,
+Manuel Acosta, 776645779,Vilacion y homicidio,
+Fernao Castro,4214545880,sin antecendentes,
+Julian Salazar,658008977434,Vilacion y asesianto,
+
+Alejandra Martinez,68724536470,sin antecedentes penales,
+Tatian Umbarila,87463425,sin antecedentes,
+Vanessa Claderon,35658796,asesinaato,
+Juliana Alarcon,6427679,hurto a mano armada,
+Erika Cano,57485,aesinato,
+Naazly Urrego,5658809,Homicidio culposo,
+Lorena Baez,54589073,hurto calificado,
+Jesisca Pinzon,75355689,Violacion en menor,
+Alejandra Valdes,46256980,asesinato
+Katty Hernandez,755345457,sin antecedentes,

@@ -4,51 +4,37 @@
 
 <head>
 
-<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Selector Genero</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/javascript.js"> </script>
 
-<meta name="viewport" content="width=device-width">
 
-<title>Avatar Nombre Hombre</title>
 
-<link href="css/indexx.css" rel="stylesheet" type="text/css" />
 
 </head>
 
-<body>
+<body >
+<div id="contenedor">
 
-
-<h1>Selecciona<br> tu Genero</h1>
-
-
-	<div class="signo_masculino" ><center>
-
-	<img src="../images/idmasculino.png" alt="MASCULINO" >
-  </center></div>
-
-
-
-	<div class="signo_femenino"><center>
-
-	<img src="../images/idfemenino.png" alt="FEMENINO">
-
-	</center></div>
-
-			<form>
-  			<label for="fname"><h2><center>Primer Nombre</center></h2></label>
-  			<center><input type="text" id="fname" name="fname" value="Andres"></center>
-  			<label for="lname"><h2><center>Primer Apellido</center></h2></label>
-  			<center><input type="text" id="lname" name="lname" value="Rincon"></center>
-			</form>
-
-	<div>
-	<button class="button button1"><p> Ingresar Nombre </p></button>
+	<div class="cajon" id="masculino" onmouseover="cambioImagenM();">
+		<div class="signo_masculino"  >
+			<img src="../images/idmasculino.png" alt="MASCULINO" id="cambio" >
+		</div>
 	</div>
-
-
-
-
-
+	<div class="cajon"  id="letra" onmouseover="cambioImagenG();">
+		<h1>Selecciona<br> tu Genero</h1>
+	</div>
+	<div class="cajon"  id="femenino" onmouseover="cambioImagenF();">
+		<div class="signo_femenino">
+			<img src="../images/idfemenino.png" alt="FEMENINO">
+		</div>
+	</div>
+</div>
 
 </body>
 
 </html>
+
+

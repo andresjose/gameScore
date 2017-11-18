@@ -1,0 +1,133 @@
+body{
+  
+	background-image:url(../images/Fondo_Hombre.jpg);
+  
+	background-position: center center;
+  
+	background-repeat: no-repeat;
+  
+	background-attachment:fixed;
+  
+	background-size: cover;
+  
+	background-color: cyan;
+
+
+}
+
+
+
+	.signo_masculino{
+  
+	float: left;
+  
+  
+   
+   
+}  
+
+	.signo_femenino{
+ 
+	float: right;
+
+
+}
+  
+
+	h1{
+  
+	color:white;
+  
+	font-family: Comic Sans MS;
+  
+	font-size: 70px;
+  
+	text-align: center;
+  
+	text-shadow: -4px 2px 10px #313131;
+  
+	letter-spacing: 0.2em;
+
+  
+  
+  
+
+}
+	h2{
+	color:white;
+	font-family: Comic Sans MS;
+  
+	font-size: 35px;
+  
+	text-align: center;
+  
+	text-shadow: -4px 2px 10px #313131;
+  
+	letter-spacing: 0.2em;
+
+
+}
+input[type=text] {
+    width: 20%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border:none;
+    background: linear-gradient(to bottom right, #00ffff , #61bcd6);
+    color: white;
+    border-radius: 20px;
+}
+
+#fname{
+	color: #04566d;
+	font-family: Comic Sans MS;
+  
+	font-size: 35px;
+ 
+
+}
+
+#lname{
+	color: #04566d;
+	font-family: Comic Sans MS;
+  
+	font-size: 35px;
+
+}
+		.button {
+    			background-color: #fff;
+    			border: none;
+   			color: orange;
+    			padding: 2px 20px;
+    			text-align: center;
+    			text-decoration: none;
+    			display: inline-block;
+    			font-size: 20px;
+    			font-family: Comic Sans MS;
+    			font-weight: bold;
+			margin: 4px 2px;
+    			-webkit-transition-duration: 5.4s; 
+    			transition-duration: 0.4s;
+    			cursor: pointer;
+    			position:absolute;
+   			top:80%;
+    			right:41.5%;
+    			width:auto;
+    			
+}
+
+
+		.button1 {
+    			background-color: white; 
+    			color: blue; 
+    			border: 2px solid blue;
+    			border-radius: 20px;
+	  
+}
+
+		.button1:hover {
+    			background-color:#00ffff;
+    			color: blue;
+    			box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}

@@ -13,6 +13,7 @@ class LorenaJudicial:
         <input type="submit" value="consultar">
         </form>        
         """
+
     @cherrypy.expose
     def info(self, nombre=""):
         res = "<p> {$detalleAntecedente} </p> <img src=\"/static/images/{$imagenConsulta}\">"
@@ -22,6 +23,7 @@ class LorenaJudicial:
         res = res.replace("{$imagenConsulta}", imagenConsulta)
         return res
 
+
 class goodAndDevil(object):
     @cherrypy.expose
     def index(self):
@@ -29,33 +31,50 @@ class goodAndDevil(object):
 <!DOCTYPE html>
 
 <html>
-  
+
 <head>
-    
-<meta name="viewport" content="width=device-width">
-    
-<title>Selector Genero</title>
-    
-<link href="indexx.css" rel="stylesheet" type="text/css" />
- 
+
+	<meta name="viewport" content="width=device-width">
+	<title>Selector Genero</title>
+	<link href="static/css/style.css" rel="stylesheet" type="text/css" />
+	<script src="static/https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="static/js/javascript.js"> </script>
+
+
+
+
 </head>
-  
-<body <div id="background"></div>
-	
-	<h1>Selecciona<br> tu Genero</h1>
 
+<body >
+<div id="contenedor">
 
-	<div class="signo_masculino"><img src="../images/idmasculino.png" alt="MASCULINO" ></div>   
-
-	<div class="signo_femenino">
-<img src="../images/idfemenino.png" alt="FEMENINO">
+	<div class="cajon" id="masculino" <!--onmouseover="cambioImagenM();-->">
+		<div class="signo_masculino"  >
+			<img src="static/images/idmasculino.png" alt="MASCULINO" id="cambio" >
+		</div>
+	</div>
+	<div class="cajon"  id="letra" <!--onmouseover="cambioImagenG();-->">
+		<h1>Selecciona<br> tu Genero</h1>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<form action="genero">        
+        <input type="text" name="genero">
+        <input type="submit" value="Enviar">
+        </form>|
+	</div>
+	<div class="cajon"  id="<!--femenino" onmouseover="cambioImagenF();-->">
+		<div class="signo_femenino">
+			<img src="static/images/idfemenino.png" alt="FEMENINO">
+		</div>
+	</div>
 </div>
-
-	
-       </div>
-
-
-
 
 </body>
 
@@ -63,10 +82,10 @@ class goodAndDevil(object):
 
 
 
-        <form action="genero">        
-        <input type="text" name="genero">
-        <input type="submit" value="Enviar">
-        </form>|
+
+
+
+        
 
 
         """
@@ -86,7 +105,7 @@ class goodAndDevil(object):
     
 <title>Avatar Nombre Hombre</title>
     
-<link href="indexx.css" rel="stylesheet" type="text/css" />
+<link href="static/css/hombre.css" rel="stylesheet" type="text/css" />
   
 </head>
   
@@ -98,14 +117,14 @@ class goodAndDevil(object):
 
 	<div class="signo_masculino" ><center>
   
-	<img src="../images/idmasculino.png" alt="MASCULINO" >
+	<img src="static/images/idmasculino.png" alt="MASCULINO" >
   </center></div>
   
 
 	
 	<div class="signo_femenino"><center>
   
-	<img src="../images/idfemenino.png" alt="FEMENINO">
+	<img src="static/images/idfemenino.png" alt="FEMENINO">
   
 	</center></div>
 
@@ -141,7 +160,7 @@ class goodAndDevil(object):
     
 <title>Avatar Nombre Mujer</title>
     
-<link href="indexx.css" rel="stylesheet" type="text/css" />
+<link href="static/css/mujer.css" rel="stylesheet" type="text/css" />
   
 </head>
   
@@ -154,14 +173,14 @@ class goodAndDevil(object):
 
 	<div class="signo_masculino" ><center>
   
-	<img src="../images/idmasculino.png" alt="MASCULINO" >
+	<img src="static/images/idmasculino.png" alt="MASCULINO" >
 	</center></div>
   
 	
 	
 <div class="signo_femenino"><center>
   
-	<img src="../images/idfemenino.png" alt="FEMENINO">
+	<img src="static/images/idfemenino.png" alt="FEMENINO">
   
 	</center></div>
 
@@ -180,7 +199,6 @@ class goodAndDevil(object):
 
 </html>"""
         return res
-
 
     @cherrypy.expose
     def pagina(self):
@@ -201,7 +219,7 @@ if __name__ == '__main__':
         }
     }
     cherrypy.config.update({'server.socket_host': '127.0.0.1', })
-    cherrypy.config.update({'server.socket_port': int(os.environ.get('PORT', '8000')), })
+    cherrypy.config.update({'server.socket_port': int(os.environ.get('PORT', '7000')), })
     cherrypy.quickstart(goodAndDevil(), '/', conf)
 
 

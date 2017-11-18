@@ -1,0 +1,222 @@
+body{
+	background-image:url(../images/fondo_seleccion_genero.jpg);
+
+	background-position: center center;
+
+	background-repeat: no-repeat;
+
+	background-attachment:fixed;
+
+  
+	background-color: cyan;
+
+
+}
+
+#contenedor {
+	display: flex;
+	width: 100%;
+}
+
+#contenedor .cajon{
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	padding: 2%;
+}
+
+.masculino{
+
+}
+
+	h1{
+	color:white;
+  
+	font-family: Comic Sans MS;
+  
+	font-size: 70px;
+  
+	text-align: center;
+  
+	text-shadow: -4px 2px 10px #313131;
+  
+	letter-spacing: 0.2em;
+
+
+
+
+}	.signo_masculino{
+
+	top: 250px;
+    	left: 70px
+	
+}  
+	.signo_femenino{
+
+
+	top: 250px;
+    	right:70px;
+}
+
+
+
+		.signo_masculino:hover{
+		filter: saturate(180%);
+}
+
+		.signo_femenino:hover{
+		filter: saturate(180%);
+}
+
+
+			
+
+			@-webkit-keyframes signo_masculino {
+  			25% {
+    			-webkit-transform: scale(1.2);
+    			transform: scale(1.2);
+  			}
+  			75% {
+    			-webkit-transform: scale(0.8);
+    			transform: scale(0.8);
+  			}
+			}
+
+			@keyframes signo_masculino {
+  			25% {
+    			-webkit-transform: scale(1.2);
+    			-ms-transform: scale(1.2);
+    			transform: scale(1.2);
+  			}
+  			75% {
+    			-webkit-transform: scale(0.8);
+    			-ms-transform: scale(0.8);
+    			transform: scale(0.8);
+  			}
+			}
+
+			.signo_masculino {
+  			display: inline-block;
+  			-webkit-transform: translateZ(0);
+  			-ms-transform: translateZ(0);
+  			transform: translateZ(0);
+  			box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+			.signo_masculino:hover {
+  			-webkit-animation-name: signo_masculino;
+  			animation-name: signo_masculino;
+  			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-timing-function: linear;
+  			animation-timing-function: linear;
+  			-webkit-animation-iteration-count: infinite;
+  			animation-iteration-count: infinite;
+}
+
+			.signo_masculino{
+  			-webkit-transition:opacity .7s ease-out;
+  			-moz-transition:opacity .6s ease-out;
+  			-ms-transition:opacity .6s ease-out;
+  			-o-transition:opacity .6s ease-out;
+  			transition:opacity.6s ease-out;
+			
+
+			signo_femenino:hover .signo_masculino{
+  			opacity:0.3;
+			}		
+
+}
+
+			@-webkit-keyframes signo_femenino {
+  			25% {
+    			-webkit-transform: scale(1.2);
+    			transform: scale(1.2);
+  			}
+  			75% {
+    			-webkit-transform: scale(0.8);
+    			transform: scale(0.8);
+  			}
+			}
+
+			@keyframes signo_femenino {
+  			25% {
+    			-webkit-transform: scale(1.2);
+    			-ms-transform: scale(1.2);
+    			transform: scale(1.2);
+  			}
+  			75% {
+    			-webkit-transform: scale(0.8);
+    			-ms-transform: scale(0.8);
+    			transform: scale(0.8);
+  			}
+			}
+
+			.signo_femenino {
+  			display: inline-block;
+  			-webkit-transform: translateZ(0);
+  			-ms-transform: translateZ(0);
+  			transform: translateZ(0);
+  			box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+			.signo_femenino:hover {
+  			-webkit-animation-name: signo_femenino;
+  			animation-name: signo_femenino;
+  			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-timing-function: linear;
+  			animation-timing-function: linear;
+  			-webkit-animation-iteration-count: infinite;
+  			animation-iteration-count: infinite;
+}
+
+
+
+
+h1 {
+position:relative;
+  cursor: default;
+  top: 30px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  margin: auto;
+  display: block;
+  
+  -webkit-animation: bounce .3s ease infinite alternate;
+  
+  font-family: 'Erica One', cursive;
+  font-size: 80px;
+  color: #FFF;
+  text-align: center;
+  line-height: 100px;
+  text-shadow: 0 1px 0 #CCC,
+               0 2px 0 #CCC,
+               0 3px 0 #CCC,
+               0 4px 0 #CCC,
+               0 5px 0 #CCC,
+               0 6px 0 transparent,
+               0 7px 0 transparent,
+               0 8px 0 transparent,
+               0 9px 0 transparent,
+               0 10px 10px rgba(0, 0, 0, .6);
+}
+/* ANIMATION */
+@-webkit-keyframes bounce {
+  100% {
+    top: -60px;
+    
+    text-shadow: 0 1px 0 #CCC,
+                 0 2px 0 #CCC,
+                 0 3px 0 #CCC,
+                 0 4px 0 #CCC,
+                 0 5px 0 #CCC,
+                 0 6px 0 #CCC,
+                 0 7px 0 #CCC,
+                 0 8px 0 #CCC,
+                 0 9px 0 #CCC,
+                 0 30px 30px rgba(0, 0, 0, .3);
+  }
+}
